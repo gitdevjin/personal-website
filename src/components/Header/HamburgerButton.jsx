@@ -9,7 +9,7 @@ export default function HamburgerButton({ isOpen, setIsOpen }) {
   return (
     <button
       onClick={() => setIsOpen(!isOpen)}
-      className="relative flex items-center justify-center w-12 h-12 rounded-full hover:ring-4 ring-green-400 ring-opacity-90 duration-200 shadow-md"
+      className="relative flex items-center justify-center w-12 h-12 rounded-full hover:ring-4 ring-green-400 ring-opacity-90 duration-300 shadow-md"
     >
       {/* Container for Hamburger/X */}
       <div className="relative flex flex-col justify-between w-8 h-6 transform transition-all duration-300">

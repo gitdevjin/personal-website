@@ -9,12 +9,27 @@
 }
 
 :root {
-  --main-theme-color: #f7f7f7;
-  --main-text-color: #1a1a1a;
+  --main-theme-color: #0b0b0b;
+  --main-text-color: #f7f7f7;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  color: white;
+  font-size: 2rem;
+}
+
+.side-menu-close {
+  left: -110vw;
+  transition: all 0.7s ease-in;
 }
 
 /* 
 nav {
+#1a1a1a;
 --main-theme-color: #535bf2; // for reference
   display: flex;
   justify-content: space-around;
@@ -25,7 +40,7 @@ nav {
 }
 */
 a {
-  color: var(--main-theme-color);
+  color: var(--main-text-color);
   text-decoration: None;
 }
 
