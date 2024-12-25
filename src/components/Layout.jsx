@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 export default function Layout() {
   console.log("Layout rendered");
   return (
-    <div>
+    <div id="layout" className="">
       <Header />
       <Outlet />
       <Footer />

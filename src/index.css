@@ -13,6 +13,7 @@
   --main-text-color: #1a1a1a;
 }
 
+/* 
 nav {
   display: flex;
   justify-content: space-around;
@@ -21,7 +22,7 @@ nav {
   font-size: 2rem;
   height: 4rem;
 }
-
+*/
 a {
   color: var(--main-theme-color);
   text-decoration: None;
