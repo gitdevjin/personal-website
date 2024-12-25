@@ -9,12 +9,13 @@
 }
 
 :root {
-  --main-theme-color: #535bf2;
+  --main-theme-color: #f7f7f7;
   --main-text-color: #1a1a1a;
 }
 
 /* 
 nav {
+--main-theme-color: #535bf2; // for reference
   display: flex;
   justify-content: space-around;
   align-items: center;

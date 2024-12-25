@@ -6,6 +6,9 @@ export default {
       backgroundImage: {
         "dark-background": "url('/src/assets/background-dark.jpg')", // Dark mode
       },
+      fontFamily: {
+        sans: ["Sour Gummy", "sans-serif"], // Add your new font
+      },
     },
   },
   plugins: [],
