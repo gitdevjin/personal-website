@@ -13,18 +13,9 @@
   --main-text-color: #f7f7f7;
 }
 
-.section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full viewport height */
-  color: white;
-  font-size: 2rem;
-}
-
 .side-menu-close {
-  left: -110vw;
-  transition: all 0.7s ease-in;
+  left: -200vw;
+  transition: all 1.3s ease-in;
 }
 
 /* 
