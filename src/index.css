@@ -13,6 +13,10 @@
   --main-text-color: #f7f7f7;
 }
 
+.fullpage-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
 .side-menu-close {
   left: -200vw;
   transition: all 1.3s ease-in;

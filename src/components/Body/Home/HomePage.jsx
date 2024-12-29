@@ -1,22 +1,75 @@
-import { useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 
 export default function HomePage() {
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      if (window.fullpage_api) {
-        window.fullpage_api.reBuild(); // Ensure fullpage.js recalculates dimensions
-      }
-    }, 200); // Delay to let animations stabilize
+  const outerRef = useRef();
+  const [currentPage, setCurrentPage] = useState(1);
+  const [isScrolling, setIsScrolling] = useState(false);
 
-    return () => clearTimeout(timeout);
-  }, []);
+  useEffect(() => {
+    const handleWheel = (e) => {
+      e.preventDefault();
+      if (isScrolling) return;
+
+      const CUSHION_HEIGHT = 5;
+      const pageHeight = window.innerHeight;
+      const { deltaY } = e;
+      const { scrollTop } = outerRef.current;
+
+      const getNextPage = (scrollTop) => {
+        if (scrollTop < pageHeight) return 1;
+        if (scrollTop < pageHeight * 2) return 2;
+        if (scrollTop < pageHeight * 3) return 3;
+        return 4;
+      };
+
+      const nextPage = getNextPage(scrollTop);
+
+      setIsScrolling(true);
+
+      // Scroll logic
+      let scrollPosition;
+      if (deltaY > 0) {
+        scrollPosition = nextPage * pageHeight + CUSHION_HEIGHT * nextPage;
+      } else {
+        scrollPosition = (nextPage - 2) * pageHeight;
+      }
+
+      outerRef.current.scrollTo({
+        top: scrollPosition,
+        left: 0,
+        behavior: "smooth",
+      });
+
+      setCurrentPage(nextPage);
+
+      setTimeout(() => {
+        setIsScrolling(false);
+      }, 1400); // Adjust time based on scroll duration
+    };
+
+    const outerRefCurrent = outerRef.current;
+    outerRefCurrent.addEventListener("wheel", handleWheel);
+
+    return () => {
+      outerRefCurrent.removeEventListener("wheel", handleWheel);
+    };
+  }, [isScrolling]);
 
   return (
-    <div className="min-h-lvh flex flex-row items-center">
-      <h1 className="text-white mr-4">Section 1</h1>
-      <img className="animate-spin w-[500px]" src="src/assets/logo-letters.png" alt="logo" />
-      <p>test</p>
-    </div>
+    <main className="h-screen overflow-hidden m-0 ">
+      <div ref={outerRef} className="h-screen overflow-y-auto fullpage-wrapper">
+        <div className="h-screen flex justify-center items-center ">
+          1
+          <img className="animate-spin" src="src/assets/logo-letters.png" alt="" />
+        </div>
+        <div className="w-[100%] h-[5px] bg-gray-800"></div>
+        <div className="h-screen flex justify-center items-center bg-blue-300">2</div>
+        <div className="w-[100%] h-[5px] bg-gray-900"></div>
+        <div className="h-screen flex justify-center items-center bg-purple-300">3</div>
+        <div className="w-[100%] h-[5px] bg-gray-900"></div>
+        <div className="h-screen flex justify-center items-center bg-green-200">4</div>
+      </div>
+    </main>
   );
 }
 
