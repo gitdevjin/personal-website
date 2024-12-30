@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from "react";
+import Footer from "../../Footer/Footer";
 
 export default function HomePage() {
   const outerRef = useRef();
@@ -23,6 +24,7 @@ export default function HomePage() {
       };
 
       const nextPage = getNextPage(scrollTop);
+      console.log(nextPage);
 
       setIsScrolling(true);
 
@@ -31,7 +33,7 @@ export default function HomePage() {
       if (deltaY > 0) {
         scrollPosition = nextPage * pageHeight + CUSHION_HEIGHT * nextPage;
       } else {
-        scrollPosition = (nextPage - 2) * pageHeight;
+        scrollPosition = (nextPage - 2) * pageHeight + CUSHION_HEIGHT * Math.abs(nextPage - 2);
       }
 
       outerRef.current.scrollTo({
@@ -56,7 +58,7 @@ export default function HomePage() {
   }, [isScrolling]);
 
   return (
-    <main className="h-screen overflow-hidden m-0 ">
+    <main className="h-screen overflow-hidden m-0">
       <div ref={outerRef} className="h-screen overflow-y-auto fullpage-wrapper">
         <div className="h-screen flex justify-center items-center ">
           1
@@ -67,7 +69,9 @@ export default function HomePage() {
         <div className="w-[100%] h-[5px] bg-gray-900"></div>
         <div className="h-screen flex justify-center items-center bg-purple-300">3</div>
         <div className="w-[100%] h-[5px] bg-gray-900"></div>
-        <div className="h-screen flex justify-center items-center bg-green-200">4</div>
+        <div className="h-screen flex justify-center items-center bg-green-200">
+          <Footer />
+        </div>
       </div>
     </main>
   );

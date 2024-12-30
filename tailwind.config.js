@@ -10,7 +10,7 @@ export default {
         sans: ["Sour Gummy", "sans-serif"], // Add your new font
       },
       animation: {
-        spin: "spin 20s linear infinite", // Custom spin animation
+        spin: "spin 25s linear infinite", // Custom spin animation
         "slide-fade": "slideFade 0.7s ease-out forwards",
       },
       keyframes: {
