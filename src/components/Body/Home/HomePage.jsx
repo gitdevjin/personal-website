@@ -1,10 +1,29 @@
 import { useRef, useEffect, useState } from "react";
 import Footer from "../../Footer/Footer";
+import DotScroll from "./DotScroll";
 
 export default function HomePage() {
   const outerRef = useRef();
   const [currentPage, setCurrentPage] = useState(1);
   const [isScrolling, setIsScrolling] = useState(false);
+
+  const getNextPage = (scrollTop, deltaY) => {
+    const pageHeight = window.innerHeight;
+
+    if (deltaY > 0) {
+      // Scrolling down
+      if (scrollTop < pageHeight) return 2;
+      if (scrollTop < pageHeight * 2) return 3;
+      if (scrollTop < pageHeight * 3) return 4;
+      return 4; // Already at the last page
+    } else {
+      // Scrolling up
+      if (scrollTop < pageHeight) return 1; // Already at the first page
+      if (scrollTop < pageHeight * 2) return 1;
+      if (scrollTop < pageHeight * 3) return 2;
+      return 3;
+    }
+  };
 
   useEffect(() => {
     const handleWheel = (e) => {
@@ -16,25 +35,13 @@ export default function HomePage() {
       const { deltaY } = e;
       const { scrollTop } = outerRef.current;
 
-      const getNextPage = (scrollTop) => {
-        if (scrollTop < pageHeight) return 1;
-        if (scrollTop < pageHeight * 2) return 2;
-        if (scrollTop < pageHeight * 3) return 3;
-        return 4;
-      };
-
-      const nextPage = getNextPage(scrollTop);
-      console.log(nextPage);
+      const nextPage = getNextPage(scrollTop, deltaY);
+      console.log("nextPage : " + nextPage);
 
       setIsScrolling(true);
 
       // Scroll logic
-      let scrollPosition;
-      if (deltaY > 0) {
-        scrollPosition = nextPage * pageHeight + CUSHION_HEIGHT * nextPage;
-      } else {
-        scrollPosition = (nextPage - 2) * pageHeight + CUSHION_HEIGHT * Math.abs(nextPage - 2);
-      }
+      const scrollPosition = (nextPage - 1) * pageHeight + CUSHION_HEIGHT * (nextPage - 1);
 
       outerRef.current.scrollTo({
         top: scrollPosition,
@@ -46,7 +53,7 @@ export default function HomePage() {
 
       setTimeout(() => {
         setIsScrolling(false);
-      }, 1400); // Adjust time based on scroll duration
+      }, 1400);
     };
 
     const outerRefCurrent = outerRef.current;
@@ -60,6 +67,7 @@ export default function HomePage() {
   return (
     <main className="h-screen overflow-hidden m-0">
       <div ref={outerRef} className="h-screen overflow-y-auto fullpage-wrapper">
+        <DotScroll currentPage={currentPage}></DotScroll>
         <div className="h-screen flex justify-center items-center ">
           1
           <img className="animate-spin" src="src/assets/logo-letters.png" alt="" />
