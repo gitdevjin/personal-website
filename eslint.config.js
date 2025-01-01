@@ -7,7 +7,16 @@ import eslintConfigPrettier from "eslint-config-prettier";
 
 export default [
   eslintConfigPrettier,
-  { ignores: ["dist", "**/.vscode/", "**/build/", "**/docs/", "**/node_modules/", "**/public/"] },
+  {
+    ignores: [
+      "dist",
+      "**/.vscode/",
+      "**/build/",
+      "**/docs/",
+      "**/node_modules/",
+      "**/public/",
+    ],
+  },
   {
     files: ["**/*.{js,jsx}"],
     languageOptions: {
@@ -33,7 +42,10 @@ export default [
       ...react.configs["jsx-runtime"].rules,
       ...reactHooks.configs.recommended.rules,
       "react/jsx-no-target-blank": "off",
-      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
       "no-unused-vars": "warn",
     },
   },

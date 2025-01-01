@@ -12,7 +12,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
     <nav className="flex justify-between p-3 sm:pl-10 sm:pr-10 m-1 ">
       <div className="flex justify-start gap-3 sm:gap-6">
         <Link
-          className="m-2 text-md sm:text-2xl flex flex-col hover:text-green-400 leading-none z-50"
+          className="m-2 text-md text-xl sm:text-2xl flex flex-col hover:text-green-400 leading-none z-50"
           to="/"
         >
           <span>Hyunjin</span>
@@ -53,7 +53,10 @@ export default function Navbar({ isOpen, setIsOpen }) {
         </Link>
       </div>
       <div className="flex items-center z-50">
-        <HamburgerButton isOpen={isOpen} setIsOpen={setIsOpen}></HamburgerButton>
+        <HamburgerButton
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+        ></HamburgerButton>
       </div>
     </nav>
   );

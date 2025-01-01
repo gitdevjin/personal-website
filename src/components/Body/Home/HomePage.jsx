@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import Footer from "../../Footer/Footer";
 import DotScroll from "./DotScroll";
+import SectionOne from "./SectionOne";
 
 export default function HomePage() {
   const outerRef = useRef();
@@ -36,12 +37,12 @@ export default function HomePage() {
       const { scrollTop } = outerRef.current;
 
       const nextPage = getNextPage(scrollTop, deltaY);
-      console.log("nextPage : " + nextPage);
 
       setIsScrolling(true);
 
       // Scroll logic
-      const scrollPosition = (nextPage - 1) * pageHeight + CUSHION_HEIGHT * (nextPage - 1);
+      const scrollPosition =
+        (nextPage - 1) * pageHeight + CUSHION_HEIGHT * (nextPage - 1);
 
       outerRef.current.scrollTo({
         top: scrollPosition,
@@ -69,14 +70,17 @@ export default function HomePage() {
       <div ref={outerRef} className="h-screen overflow-y-auto fullpage-wrapper">
         <DotScroll currentPage={currentPage}></DotScroll>
         <div className="h-screen flex justify-center items-center ">
-          1
-          <img className="animate-spin" src="src/assets/logo-letters.png" alt="" />
+          <SectionOne></SectionOne>
         </div>
-        <div className="w-[100%] h-[5px] bg-gray-800"></div>
-        <div className="h-screen flex justify-center items-center bg-blue-300">2</div>
-        <div className="w-[100%] h-[5px] bg-gray-900"></div>
-        <div className="h-screen flex justify-center items-center bg-purple-300">3</div>
-        <div className="w-[100%] h-[5px] bg-gray-900"></div>
+        <div className="w-[100%] h-[5px] "></div> {/* Divider */}
+        <div className="h-screen flex justify-center items-center text-white text-3xl">
+          2
+        </div>
+        <div className="w-[100%] h-[5px] "></div> {/* Divider */}
+        <div className="h-screen flex justify-center items-center bg-purple-300">
+          3
+        </div>
+        <div className="w-[100%] h-[5px] "></div> {/* Divider */}
         <div className="h-screen flex justify-center items-center bg-green-200">
           <Footer />
         </div>

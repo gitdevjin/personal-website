@@ -17,7 +17,7 @@ Dot.propTypes = {
 
 export default function DotScroll({ currentPage }) {
   return (
-    <div className="fixed top-1/2 right-[50px] transform -translate-y-1/2">
+    <div className="fixed top-1/2 right-[25px] transform -translate-y-1/2 hidden lg:block">
       <div className="flex flex-col justify-between items-center w-5 h-24">
         <Dot num={1} currentPage={currentPage}></Dot>
         <Dot num={2} currentPage={currentPage}></Dot>
