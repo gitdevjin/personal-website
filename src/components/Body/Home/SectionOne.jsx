@@ -1,7 +1,10 @@
 export default function SectionOne() {
   return (
-    <div className="relative flex flex-row w-full justify-center">
-      <div className="flex flex-col gap-10 justify-start pl-10 sm:pl-48 border-l-1 border-b-lime-100 border-l-lime-100 text-[#f7f7f7] text-3xl sm:text-5xl w-full">
+    <div className="m-10 p-5 relative flex flex-row w-full justify-evenly h-3/4">
+      <div
+        className="flex flex-col gap-10 justify-center pl-5 pt-5
+        font-bold text-[#f7f7f7] text-3xl sm:text-5xl"
+      >
         <div className="text-orange-400 ">Hello! I&apos;m</div>
         <div className="flex flex-col sm:text-8xl">
           <span>Hyunjin</span>
@@ -10,13 +13,13 @@ export default function SectionOne() {
         <div className="text-green-400 text-3xl sm:text-5xl">Web Developer</div>
       </div>
       <img
-        className="absolute left-[33%] animate-spin w-auto p-0 m-0 sm:max-w-[400px] hidden lg:block"
+        className="absolute animate-spin w-[400px] -left-20 top-80 p-0 m-0 md:hidden lg:block opacity-20"
         src="src/assets/logo-letters.png"
         alt=""
       />
-      <div className="w-full">
+      <div className="flex items-center justify-center">
         <img
-          className="sm:pl-40 sm:max-w-[400px] w-auto opacity-30"
+          className="w-[300px] h-[300px] border rounded-full"
           src="src/assets/cat.jpg"
           alt="Me"
         />
