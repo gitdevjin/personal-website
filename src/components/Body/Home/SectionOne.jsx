@@ -5,11 +5,11 @@ export default function SectionOne() {
   return (
     <div className="m-10 p-5 relative flex flex-row w-full justify-evenly h-5/6">
       <div
-        className="flex flex-col gap-14 justify-center pl-4 pt-10
+        className="flex flex-col gap-8 sm:gap-14 justify-center pl-4 pt-10
         font-bold text-[#f7f7f7] text-3xl sm:text-5xl"
       >
         <img
-          className="w-[200px] h-[200px] border rounded-full brightness-75 sm:hidden"
+          className="w-[220px] h-[220px] border rounded-full brightness-75 sm:hidden"
           src="src/assets/me.jpg"
           alt="Me"
         />
@@ -33,8 +33,8 @@ export default function SectionOne() {
           I&apos;m a fullstack web developer with a strong focus on backend
           development
         </div>
-        <div className="flex flex-row justify-center gap-4">
-          <FaGithub className="bg-yellow-500 hover:bg-yellow-300 text-black size-20 rounded-full opacity-50" />
+        <div className="flex flex-row justify-center gap-4 h-32">
+          <FaGithub className="bg-yellow-500 hover:bg-yellow-300 hover:size-24 text-black size-20 rounded-full opacity-50" />
           <FaSquareXTwitter className="bg-[#f7f7f7] hover:bg-blue-200 text-black size-20 rounded-md opacity-50" />
         </div>
       </div>
