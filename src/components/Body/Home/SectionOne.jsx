@@ -4,7 +4,7 @@ import { IoIosMail } from "react-icons/io";
 
 export default function SectionOne() {
   return (
-    <div className="m-10 p-5 relative flex flex-row w-full justify-evenly h-5/6">
+    <div className="relative flex flex-row w-full justify-evenly h-screen bg-transparent">
       <div
         className="flex flex-col gap-8 sm:gap-14 justify-center pl-4 pt-10
         font-bold text-[#f7f7f7] text-3xl sm:text-5xl"

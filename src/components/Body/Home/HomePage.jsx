@@ -8,8 +8,8 @@ export default function HomePage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [isScrolling, setIsScrolling] = useState(false);
 
-  const getNextPage = (scrollTop, deltaY) => {
-    const pageHeight = window.innerHeight;
+  const getNextPage = (scrollTop, deltaY, headerHeight) => {
+    const pageHeight = window.innerHeight - headerHeight;
 
     if (deltaY > 0) {
       // Scrolling down
@@ -27,6 +27,7 @@ export default function HomePage() {
   };
 
   useEffect(() => {
+    const headerHeight = document.getElementById("Header").offsetHeight;
     const handleWheel = (e) => {
       e.preventDefault();
       if (isScrolling) return;
@@ -36,7 +37,7 @@ export default function HomePage() {
       const { deltaY } = e;
       const { scrollTop } = outerRef.current;
 
-      const nextPage = getNextPage(scrollTop, deltaY);
+      const nextPage = getNextPage(scrollTop, deltaY, headerHeight);
 
       setIsScrolling(true);
 
@@ -66,7 +67,7 @@ export default function HomePage() {
   }, [isScrolling]);
 
   return (
-    <main className="h-screen overflow-hidden m-0">
+    <main className="relative top-0 left-0 w-full overflow-hidden m-0 bg-transparent">
       <div ref={outerRef} className="h-screen overflow-y-auto fullpage-wrapper">
         <DotScroll currentPage={currentPage}></DotScroll>
         <div className="h-screen flex justify-center items-center ">

@@ -9,7 +9,7 @@ Navbar.propTypes = {
 
 export default function Navbar({ isOpen, setIsOpen }) {
   return (
-    <nav className="flex justify-between p-3 sm:pl-10 sm:pr-10 m-1 ">
+    <nav className="top-0 left-0 flex justify-between p-3 sm:pl-10 sm:pr-10 m-1 bg-transparent">
       <div className="flex justify-start gap-3 sm:gap-6">
         <Link
           className="m-2 text-md text-xl sm:text-2xl flex flex-col hover:text-green-400 leading-none z-50"
