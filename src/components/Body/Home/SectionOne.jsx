@@ -1,5 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import { IoIosMail } from "react-icons/io";
 
 export default function SectionOne() {
   return (
@@ -23,19 +24,27 @@ export default function SectionOne() {
           Hire Me
         </button>
       </div>
-      <div className="hidden sm:flex sm:flex-col sm:gap-12 sm:items-center sm:justify-center sm:w-[500px]">
+      <div className="hidden sm:flex sm:flex-col sm:gap-6 sm:items-center sm:justify-center sm:w-[500px]">
         <img
           className="w-[280px] h-[280px] border rounded-full brightness-75"
           src="src/assets/me.jpg"
           alt="Me"
         />
         <div className="text-[#f7f7f7] text-xl">
-          I&apos;m a fullstack web developer with a strong focus on backend
-          development
+          <span className="text-3xl text-orange-500">With</span> a passion for
+          solving complex problems, I enjoy creating APIs, designing database
+          architectures, building web application with seamless user
+          experiences.
         </div>
-        <div className="flex flex-row justify-center gap-4 h-32">
-          <FaGithub className="bg-yellow-500 hover:bg-yellow-300 hover:size-24 text-black size-20 rounded-full opacity-50" />
-          <FaSquareXTwitter className="bg-[#f7f7f7] hover:bg-blue-200 text-black size-20 rounded-md opacity-50" />
+        <div className="flex flex-col w-full gap-4 mt-10">
+          <div className="text-3xl w-full text-green-800 font-bold">
+            Connect with Me
+          </div>
+          <div className="flex flex-row justify-start gap-8 h-24 w-full">
+            <FaGithub className="bg-[#f7f7f7] hover:bg-blue-200 hover:size-16 text-black size-12 rounded-full opacity-50 transition-all" />
+            <FaSquareXTwitter className="bg-[#f7f7f7] hover:bg-blue-200 hover:size-16 text-black size-12 rounded-md opacity-50 transition-all" />
+            <IoIosMail className="bg-[#f7f7f7] hover:bg-blue-200 hover:size-16 text-black size-12 rounded-md opacity-50 transition-all" />
+          </div>
         </div>
       </div>
 
