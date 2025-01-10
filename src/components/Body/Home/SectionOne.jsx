@@ -24,7 +24,7 @@ export default function SectionOne() {
           Hire Me
         </button>
       </div>
-      <div className="hidden sm:flex sm:flex-col sm:gap-6 sm:items-center sm:justify-center sm:w-[500px]">
+      <div className="hidden sm:flex sm:flex-col sm:gap-6 sm:items-center sm:justify-center sm:pt-20 sm:w-[500px]">
         <img
           className="w-[280px] h-[280px] border rounded-full brightness-75"
           src="src/assets/me.jpg"
@@ -49,7 +49,7 @@ export default function SectionOne() {
       </div>
 
       <img
-        className="absolute animate-spin w-[250px] -left-12 top-[60px] p-0 m-0 hidden lg:block opacity-20"
+        className="absolute animate-spin w-[250px] -left-6 top-[80px] p-0 m-0 hidden lg:block opacity-20"
         src="src/assets/logo-letters.png"
         alt=""
       />

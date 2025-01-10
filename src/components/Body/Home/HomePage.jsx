@@ -8,8 +8,8 @@ export default function HomePage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [isScrolling, setIsScrolling] = useState(false);
 
-  const getNextPage = (scrollTop, deltaY, headerHeight) => {
-    const pageHeight = window.innerHeight - headerHeight;
+  const getNextPage = (scrollTop, deltaY) => {
+    const pageHeight = window.innerHeight;
 
     if (deltaY > 0) {
       // Scrolling down
@@ -27,7 +27,6 @@ export default function HomePage() {
   };
 
   useEffect(() => {
-    const headerHeight = document.getElementById("Header").offsetHeight;
     const handleWheel = (e) => {
       e.preventDefault();
       if (isScrolling) return;
@@ -37,7 +36,7 @@ export default function HomePage() {
       const { deltaY } = e;
       const { scrollTop } = outerRef.current;
 
-      const nextPage = getNextPage(scrollTop, deltaY, headerHeight);
+      const nextPage = getNextPage(scrollTop, deltaY);
 
       setIsScrolling(true);
 
