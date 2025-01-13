@@ -1,12 +1,13 @@
 import { FaGithub } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
+import { FaBlogger, FaLinkedin } from "react-icons/fa";
 
 export default function SectionOne() {
   return (
-    <div className="relative flex flex-row w-full justify-evenly h-screen bg-transparent">
+    <div className="relative flex flex-row w-full justify-evenly gap-8 h-screen bg-transparent">
       <div
-        className="flex flex-col gap-8 sm:gap-14 justify-center pl-4 pt-10
+        className="flex flex-col gap-8 sm:gap-14 justify-center sm:pl-4 pt-10
         font-bold text-[#f7f7f7] text-3xl sm:text-5xl"
       >
         <img
@@ -20,7 +21,7 @@ export default function SectionOne() {
           <span>Shin</span>
         </div>
         <div className="text-green-400 text-3xl sm:text-5xl">Web Developer</div>
-        <button className="bg-green-600 hover:bg-green-500 hover:w-80 transition-all text-[#f7f7f7] font-bold py-2 px-4 mt-8 mb-2 rounded-full w-60">
+        <button className="bg-green-600 hover:bg-green-500 sm:hover:w-80 transition-all text-[#f7f7f7] font-bold py-2 px-4 mt-8 mb-2 rounded-full w-60">
           Hire Me
         </button>
       </div>
@@ -41,9 +42,17 @@ export default function SectionOne() {
             Connect with Me
           </div>
           <div className="flex flex-row justify-start gap-8 h-24 w-full">
-            <FaGithub className="bg-[#f7f7f7] hover:bg-blue-200 hover:size-16 text-black size-12 rounded-full opacity-50 transition-all" />
-            <FaSquareXTwitter className="bg-[#f7f7f7] hover:bg-blue-200 hover:size-16 text-black size-12 rounded-md opacity-50 transition-all" />
-            <IoIosMail className="bg-[#f7f7f7] hover:bg-blue-200 hover:size-16 text-black size-12 rounded-md opacity-50 transition-all" />
+            <a
+              href="https://github.com/gitdevjin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="bg-[#f7f7f7] hover:bg-blue-200 text-black size-12 rounded-full opacity-50 transition-all transform hover:scale-125" />
+            </a>
+            <FaSquareXTwitter className="bg-[#f7f7f7] hover:bg-blue-200 text-black size-12 rounded-md opacity-50 transition-all transform hover:scale-125" />
+            <FaBlogger className="bg-[#f7f7f7] hover:bg-blue-200 text-black size-12 rounded-md opacity-50 transition-all transform hover:scale-125" />
+            <FaLinkedin className="bg-[#f7f7f7] hover:bg-blue-200 text-black size-12 rounded-md opacity-50 transition-all transform hover:scale-125" />
+            <IoIosMail className="bg-[#f7f7f7] hover:bg-blue-200 text-black size-12 rounded-md opacity-50 transition-all transform hover:scale-125" />
           </div>
         </div>
       </div>
