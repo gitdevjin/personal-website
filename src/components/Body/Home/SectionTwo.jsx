@@ -1,6 +1,6 @@
 export default function SectionTwo() {
   return (
-    <div id="sectionTwo" className="w-full h-full pt-28">
+    <div id="sectionTwo" className="w-full h-full pt-20 sm:pt-28">
       <div className="flex flex-col justify-center items-center">
         <div className="relative sm:text-4xl">
           <span
@@ -13,7 +13,7 @@ export default function SectionTwo() {
             Profile Preview
           </span>
         </div>
-        <div className="grid grid-cols-2 gap-4 w-full h-full justify-around pl-5 pr-5 sm:pt-10 sm:pl-20 sm:pr-20">
+        <div className="grid grid-cols-2 gap-4 w-full h-full justify-around pr-5 sm:pt-10 sm:pl-24 sm:pr-10">
           <div className="w-full">
             <div className="flex justify-center items-center sm:text-5xl pb-2">
               Education
@@ -23,7 +23,7 @@ export default function SectionTwo() {
                 <span className="text-orange-300">
                   Computer Programming and analysis
                 </span>
-                <span className="text-xl text-gray-400">Advanced Deploma</span>
+                <span className="text-xl  text-gray-400">Advanced Deploma</span>
                 <span className="text-xl text-gray-400">2022 - 2024</span>
                 <span className="text-xl text-gray-400">Seneca College</span>
                 <span className="text-2xl text-red-300">Toronto, Canada</span>
@@ -72,7 +72,7 @@ export default function SectionTwo() {
               </div>
               <div className="flex flex-col p-3">
                 <span className="text-orange-300">Backend</span>
-                <span className="text-xl text-gray-400">
+                <span className="text-md sm:text-xl text-gray-400">
                   Node.js,Express.js, JDBC/Servlet/JSP(Java)
                 </span>
                 <span className="text-xl text-gray-400">

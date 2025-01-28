@@ -3,6 +3,7 @@ import Footer from "../../Footer/Footer";
 import DotScroll from "./DotScroll";
 import SectionOne from "./SectionOne";
 import SectionTwo from "./SectionTwo";
+import SectionThree from "./SectionThree";
 
 export default function HomePage() {
   const outerRef = useRef();
@@ -78,8 +79,8 @@ export default function HomePage() {
           <SectionTwo />
         </div>
         <div className="w-[100%] h-[5px] "></div> {/* Divider */}
-        <div className="h-screen flex justify-center items-center bg-purple-300">
-          3
+        <div className="h-screen flex justify-center items-center text-white">
+          <SectionThree />
         </div>
         <div className="w-[100%] h-[5px] "></div> {/* Divider */}
         <div className="h-screen flex justify-center items-center bg-green-200">
