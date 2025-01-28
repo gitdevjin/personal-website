@@ -12,7 +12,7 @@ export default function HamburgerButton({ isOpen, setIsOpen }) {
       className="relative flex items-center justify-center w-12 h-12 rounded-full hover:ring-4 ring-green-400 ring-opacity-90 duration-300 shadow-md"
     >
       {/* Container for Hamburger/X */}
-      <div className="relative flex flex-col justify-between w-8 h-6 transform transition-all duration-300">
+      <div className="relative flex flex-col justify-between w-8 h-6 transform transition-all duration-300 ">
         {/* Top Line */}
         <div
           className={`bg-white h-1 w-full rounded-sm transform transition-all duration-500 ${

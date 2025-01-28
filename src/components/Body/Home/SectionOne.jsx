@@ -15,7 +15,7 @@ export default function SectionOne() {
           src="src/assets/me.jpg"
           alt="Me"
         />
-        <div className="text-orange-400 ">Hello! I&apos;m</div>
+        <div className="text-orange-400">Hello! I&apos;m</div>
         <div className="flex flex-col sm:text-8xl">
           <span>Hyunjin</span>
           <span>Shin</span>
