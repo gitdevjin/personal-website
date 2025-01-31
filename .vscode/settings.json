@@ -1,0 +1,13 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "eslint.debug": true,
+  "eslint.validate": ["javascript", "javascriptreact"],
+  "prettier.printWidth": 80,
+  "prettier.proseWrap": "always",
+  "editor.wordWrapColumn": 80
+}
