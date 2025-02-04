@@ -2,7 +2,7 @@ export default function SectionTwo() {
   return (
     <div id="sectionTwo" className="w-full h-full pt-20 sm:pt-28">
       <div className="flex flex-col justify-center items-center">
-        <div className="relative sm:text-4xl">
+        <div className="relative sm:text-2xl md:text-4xl">
           <span
             className="text-orange-400 hover:before:scale-x-100 before:content-['']
                       before:absolute before:bottom-0 before:left-0 before:w-full
@@ -13,9 +13,9 @@ export default function SectionTwo() {
             Profile Preview
           </span>
         </div>
-        <div className="grid grid-cols-2 gap-4 w-full h-full justify-around pr-5 sm:pt-10 sm:pl-24 sm:pr-10">
+        <div className="grid grid-cols-2 gap-4 w-full h-full justify-around pr-5 md:pt-10 md:pl-24 md:pr-10">
           <div className="w-full">
-            <div className="flex justify-center items-center sm:text-5xl pb-2">
+            <div className="flex justify-center items-center sm:text-3xl md:text-5xl pb-2">
               Education
             </div>
             <div className="text-lg sm:text-3xl">
@@ -58,7 +58,7 @@ export default function SectionTwo() {
           </div>
           {/* Divider */}
           <div className="w-full">
-            <div className="flex justify-center items-center sm:text-5xl pb-2">
+            <div className="flex justify-center items-center sm:text-3xl md:text-5xl pb-2">
               Tech Stacks
             </div>
             <div className="text-lg sm:text-3xl">

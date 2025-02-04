@@ -83,7 +83,7 @@ export default function HomePage() {
           <SectionThree />
         </div>
         <div className="w-[100%] h-[5px] "></div> {/* Divider */}
-        <div className="h-screen flex justify-center items-center bg-green-200">
+        <div className="h-screen flex justify-center items-center text-white">
           <Footer />
         </div>
       </div>
