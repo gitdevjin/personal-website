@@ -18,7 +18,10 @@ export default function Navbar({ isOpen, setIsOpen }) {
           <span>Hyunjin</span>
           <span>Shin</span>
         </Link>
-        <Link className="m-2 text-md sm:text-2xl flex items-center" to="/">
+        <Link
+          className="m-2 text-md sm:text-2xl flex items-center"
+          to="/profile"
+        >
           <span
             className="relative hover:before:scale-x-100 before:content-['']
                       before:absolute before:bottom-0 before:left-0 before:w-full
@@ -40,7 +43,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
             Blog
           </span>
         </Link>
-        <Link className="m-2 text-md sm:text-2xl flex items-center" to="/blog">
+        <Link className="m-2 text-md sm:text-2xl flex items-center" to="/">
           <span
             className="relative hover:before:scale-x-100 before:content-['']
                       before:absolute before:bottom-0 before:left-0 before:w-full
